@@ -3,33 +3,27 @@ import Container from "./Container";
 
 function App() {
   return (
-    <div className="App">
-      <Container header="Example header" direction="horizontal">
-        <div>This is an example!</div>
-        <div>This is an example!</div>
-        <div>This is an example!</div>
-        <div>This is an example!</div>
-        <div>This is an example!</div>
-        <div>This is an example!</div>
-        <div>This is an example!</div>
+    <div>
+      <Container
+        direction="row"
+        header="Header 1"
+        textPosition="left"
+        contentPosition="center"
+      >
+        {/* Children for the first Container */}
+        <p>Content 1</p>
+        <p>More Content 1</p>
       </Container>
-      <Container header="Example header" textPosition="center">
-        <img
-          alt="turtle"
-          src="https://pbs.twimg.com/profile_images/3022993403/fdae67d800527328cee7a222f048dbbd.jpeg"
-        />
-        <img
-          alt="turtle"
-          src="https://pbs.twimg.com/profile_images/3022993403/fdae67d800527328cee7a222f048dbbd.jpeg"
-        />
-        <img
-          alt="turtle"
-          src="https://pbs.twimg.com/profile_images/3022993403/fdae67d800527328cee7a222f048dbbd.jpeg"
-        />
-        <img
-          alt="turtle"
-          src="https://pbs.twimg.com/profile_images/3022993403/fdae67d800527328cee7a222f048dbbd.jpeg"
-        />
+
+      <Container
+        direction="column"
+        header="Header 2"
+        textPosition="center"
+        contentPosition="flex-start"
+      >
+        {/* Children for the second Container */}
+        <img src="image1.jpg" alt="Image 1" />
+        <img src="image2.jpg" alt="Image 2" />
       </Container>
     </div>
   );
